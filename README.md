@@ -11,7 +11,14 @@ In this project we are going to be implementing cross account deployment strateg
 
 ![](images/CrossAccountServerlessDeployment.png)
 
-# 
+#### Pre-requisites 
+1. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
+2. Intall the [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html).
+3. Clone this repository.
+4. Have the following AWS accounts (if using Control Tower, [this is useful](https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html#quick-account-provisioning)):
+    * Tooling - Source 
+    * Development - Target 
+5. Create permissions for tools account (optional)
 
 ## License
 
