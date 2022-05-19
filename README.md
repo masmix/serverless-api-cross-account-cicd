@@ -16,8 +16,7 @@ This reference architecture demonstrates:
 - store the output artifacts in S3Bucket
 - deploy these artifacts to a Dev-Target AWS account
 - validate your deployment then approve the changes to be deployed using [AWS CloudFormation](https://aws.amazon.com/cloudformation/).
-
-> This orchestration of code movement from code checkin to deployment is securely handled by [AWS CodePipeline](https://aws.amazon.com/codepipeline/)
+- orchestration of code movement from code checkin to deployment is securely handled by [AWS CodePipeline](https://aws.amazon.com/codepipeline/)
 
 #### Pre-requisites 
 1. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
