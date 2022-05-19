@@ -261,6 +261,7 @@ Resources:
               - s3:AbortMultipartUpload
               - s3:RestoreObject
               - s3:ListMultipartUploadParts
+              - s3:SetBucketEncryption
             Effect: Allow
             Resource:
               - !Sub arn:aws:s3:::${CodePipelineS3Bucket}
