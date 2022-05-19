@@ -98,6 +98,16 @@ Solution:
 aws sts assume-role --role-arn "arn:aws:iam::$TOOLS_ACCOUNT_ID:role/aws-refarch-cross-account-pipeline-service-role" --role-session-name AWSCLI-Session-Tools --profile tools_admin
 ```
 
+3. Power user session has been expired
+
+```sh
+An error occurred (ExpiredToken) when calling the CreatePolicyVersion operation: The security token included in the request is expired
+```
+
+Solution:
+
+[Update session credentials again](Permissions-accounts-set-up/Tools/README.md#configuration-steps)
+
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.

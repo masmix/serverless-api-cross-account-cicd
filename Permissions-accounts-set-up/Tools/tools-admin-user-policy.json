@@ -6,6 +6,7 @@
             "Action": [
                 "iam:ListRoles",
                 "iam:GetRole",
+                "iam:GetPolicy",
                 "iam:CreateRole",
                 "iam:DeleteRolePolicy",
                 "iam:DeleteRole",
@@ -16,6 +17,7 @@
                 "codecommit:DeleteRepository",
                 "codecommit:GetRepository",
                 "codebuild:CreateProject",
+                "codebuild:DeleteProject",
                 "sts:AssumeRole",
                 "cloudformation:*",
                 "s3:CreateBucket",
