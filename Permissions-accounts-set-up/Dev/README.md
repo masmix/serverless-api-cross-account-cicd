@@ -21,7 +21,7 @@
 - copy data to clipboard from point 2 
 
 ```console
-[tools]
+[dev]
 aws_access_key_id=xxxx
 aws_secret_access_key=xxxx
 aws_session_token=xxxx
@@ -30,10 +30,11 @@ aws_session_token=xxxx
 - paste into .aws/credentials
 
 ```console
-[tools]
+[dev]
 aws_access_key_id=xxx
 aws_secret_access_key=xxx
 aws_session_token=xxx
+```
 
 - verify identity
 ```sh
