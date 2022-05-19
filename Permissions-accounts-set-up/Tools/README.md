@@ -1,15 +1,46 @@
+# Purpose
 
-- configure aws cli profile with ceredentials 
-```sh
-aws configure --profile tools
-aws configure set aws_session_token "token_value_from_above_aws_sts_command" --profile tools
+This guide comes from [](../README.md)
 
+# Schema
+
+![](images/aws-permission-schema.drawio.png)
+
+# Prereqisities
+
+- AWS CLI installed
+- URL for Organisation SSO Dashbard is known. It should be an output from step 4 from main ![](../../README.md)
+
+# Configuration steps
+- get programatic acess keys from tools account 
+![](../../images/AWS-SSO-Dashboard.png)
+
+![](../../images/get-aws-credentials.png)
+
+- copy data to clipboard from point 2 
+
+```console
+[tools]
+aws_access_key_id=xxxx
+aws_secret_access_key=xxxx
+aws_session_token=xxxx
+```
+
+- paste into .aws/credentials
+
+```console
+[tools]
+aws_access_key_id=xxx
+aws_secret_access_key=xxx
+aws_session_token=xxx
 ```
 
 - verify identity
+
 ```sh
 aws sts get-caller-identity --profile tools
 ```
+
 - create IAM admin user
 ```sh
 aws iam create-user --user-name admin --profile tools
