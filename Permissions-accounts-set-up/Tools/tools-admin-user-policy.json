@@ -18,6 +18,7 @@
                 "codecommit:GetRepository",
                 "codebuild:CreateProject",
                 "codebuild:DeleteProject",
+                "codepipeline:GetPipeline",
                 "sts:AssumeRole",
                 "cloudformation:*",
                 "s3:CreateBucket",
