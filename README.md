@@ -64,8 +64,7 @@ AWS Console - Cloud Formation - stack 'codecommit-repository-and-cicd-pipeline' 
 
 # Troubleshooting
 
-If we have a problem with not enough permissions and Cloudformation stack fail then we should:
-
+1. If we have a problem with not enough permissions and Cloudformation stack fail then we should:
 
 - remove stack
 
@@ -84,6 +83,19 @@ aws iam create-policy-version  --policy-arn arn:aws:iam::374925447540:policy/aws
 Example command:
 ```sh
 aws cloudformation deploy --stack-name codecommit-repository-and-cicd-pipeline  --template-file cloudformation/source-account/cf-ServerlessDeployPipeline.yml --capabilities CAPABILITY_NAMED_IAM --parameter-overrides TargetAccountID=226858071640   --profile aleph_tools_deployer
+```
+
+2. STS session expired
+
+Sympthom: 
+Console message:
+```console
+An error occurred (ExpiredToken) when calling the DescribeStacks operation: The security token included in the request is expired
+```
+
+Solution:
+```sh
+aws sts assume-role --role-arn "arn:aws:iam::$TOOLS_ACCOUNT_ID:role/aws-refarch-cross-account-pipeline-service-role" --role-session-name AWSCLI-Session-Tools --profile tools_admin
 ```
 
 ## License
