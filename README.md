@@ -23,11 +23,11 @@ This reference architecture demonstrates:
 2. Intall the [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html).
 3. Clone this repository.
 4. Have the following AWS accounts (if using Control Tower, [this is useful](https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html#quick-account-provisioning)):
-    * Tooling - Source 
+    * Tools - Source 
     * Development - Target 
 5. Create permissions for Development - Target account (optional)
 
-If you want to create IAM user and role only for this particular deployment please follow the instructions from [Set up additional tools account permissions](Permissions-accounts-set-up/Dev/README.md)
+If you want to create IAM user and role only for this particular deployment please follow the instructions from [Set up additional tools account permissions](Permissions-accounts-set-up/README.md)
 If your profile user has enough permissions, this step can be skipped. 
 
 6. Create permissions for tools account (optional)
