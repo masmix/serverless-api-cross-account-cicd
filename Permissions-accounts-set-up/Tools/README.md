@@ -1,20 +1,3 @@
-# Purpose 
-
-> Below steps are optional if your IAM user have not enough permissions cloudformation, s3 and kms services to create all required resources 
-> Here we will configure permissions for tools account for IAM role only for this particular permission.
-
-# Schema
-
-![](images/aws-permission-schema.drawio.png)
-
-# Prereqisities
-
-- AWS CLI insttalled
-- URL for Organisation SSO Dashbard is known. It should be an output from step 4 from main ![](../../README.md)
-
-# Configuration staps
-- get programatic acess keys from tools account 
-![](images/AWS-SSO-Dashboard.png)
 
 - configure aws cli profile with ceredentials 
 ```sh
@@ -99,6 +82,17 @@ Example output
 # Finish
 
 tools_admin_deployer name should be used as profile name for [main script](../../single-click-cross-account-pipeline.sh) 
+
+# Troubleshooting 
+
+Sympthom:
+Error message:
+```console
+An error occurred (ExpiredToken) when calling the CreatePolicyVersion operation: The security token included in the request is expired
+```
+
+Solution:
+Update credentials with session token.
 
 # References
 

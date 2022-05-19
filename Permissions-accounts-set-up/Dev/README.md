@@ -12,9 +12,9 @@
 - AWS CLI insttalled
 - URL for Organisation SSO Dashbard is known. It should be an output from step 4 from main ![](../../README.md)
 
-# Configuration staps
+# Configuration steps
 - get programatic acess keys from tools account 
-![](images/AWS-SSO-Dashboard.png)
+![](../../images/AWS-SSO-Dashboard.png)
 
 - configure aws cli profile with ceredentials 
 ```sh
@@ -57,7 +57,7 @@ aws iam create-access-key --user-name admin --profile dev
 ```
 - configure
 ```sh
-aws configure --profile dev_admin
+aws configure --profile dev_deployer 
 AWS Access Key ID [None]: ExampleAccessKeyID1
 AWS Secret Access Key [None]: ExampleSecretKey1
 Default region name [None]: eu-west-1
@@ -99,6 +99,17 @@ Example output
 # Finish 
 
 Your STS aws profile is configured and know for further steps. 
+
+# Troubleshooting 
+
+Sympthom:
+Error message:
+```console
+An error occurred (ExpiredToken) when calling the CreatePolicyVersion operation: The security token included in the request is expired
+```
+
+Solution:
+Update credentials with session token.
 
 # References
 
