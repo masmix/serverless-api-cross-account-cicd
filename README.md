@@ -73,6 +73,12 @@ aws iam create-policy-version  --policy-arn arn:aws:iam::374925447540:policy/aws
 ```
 
 - deploy stack again
+
+Example command:
+```sh
+aws cloudformation deploy --stack-name codecommit-repository-and-cicd-pipeline  --template-file cloudformation/source-account/cf-ServerlessDeployPipeline.yml --capabilities CAPABILITY_NAMED_IAM --parameter-overrides TargetAccountID=226858071640   --profile aleph_tools_deployer
+```
+
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
