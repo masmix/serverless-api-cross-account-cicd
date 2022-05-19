@@ -27,7 +27,7 @@ This reference architecture demonstrates:
     * Development - Target 
 5. Create permissions for Development - Target account (optional)
 
-If you want to create IAM user and role only for this particular deployment please follow the instructions from [Set up additional tools account permissions](Permissions-accounts-set-up/README.md)
+If you want to create IAM user and role only for this particular deployment please follow the instructions from [Set up additional tools account permissions](Permissions-accounts-set-up/Dev/README.md)
 If your profile user has enough permissions, this step can be skipped. 
 
 6. Create permissions for tools account (optional)
