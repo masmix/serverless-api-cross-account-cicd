@@ -5,7 +5,7 @@
 
 # Schema
 
-![](images/aws-permission-schema.drawio.png)
+![](../images/aws-permission-schema.drawio.png)
 
 # Steps 
 - [Guide for Dev - target account](Dev/README.md)
