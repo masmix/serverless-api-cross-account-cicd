@@ -20,6 +20,7 @@
                 "codebuild:DeleteProject",
                 "codepipeline:GetPipeline",
                 "codepipeline:CreatePipeline",
+                "codepipeline:DeletePipeline ",
                 "sts:AssumeRole",
                 "cloudformation:*",
                 "s3:CreateBucket",
