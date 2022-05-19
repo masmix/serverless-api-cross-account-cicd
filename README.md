@@ -4,7 +4,7 @@ In this project we are going to be implementing cross account deployment strateg
 
 ![](images/CrossAccountServerlessDeployment.png)
 
-> It uses cross account deployment approach, which is AWS best practice for workloads.
+> It uses cross account deployment approach, which is AWS best practice for workloads know as [Well Architected Framework - Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/aws-account-management-and-separation.html)
 
 # Build CI/CD Pipeline for Cross Account Deployment of Lambda API Using Serverless Framework
 
