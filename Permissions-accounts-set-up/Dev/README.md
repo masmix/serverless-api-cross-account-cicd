@@ -10,7 +10,7 @@
 # Prereqisities
 
 - AWS CLI installed
-- URL for Organisation SSO Dashbard is known. It should be an output from step 4 from [main README](../../README.md)
+- URL for Organisation SSO Dashbard is known. It should be an output from step 4 from [main README](../../README.md#pre-requisites)
 
 Example URL
 ```console
