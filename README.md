@@ -1,3 +1,9 @@
+## Introduction
+
+In this project we are going to be implementing cross account deployment strategy explained in [this](https://aws.amazon.com/blogs/devops/aws-building-a-secure-cross-account-continuous-delivery-pipeline/) blog to deployment of Lambda based API’s using third party [Serverless](https://www.serverless.com/) framework.
+
+![](images/CrossAccountServerlessDeployment.png)
+
 # Build CI/CD Pipeline for Cross Account Deployment of Lambda API Using Serverless Framework
 
 # Reference Architecture: Cross Account AWS CodePipeline 
@@ -10,12 +16,6 @@ This reference architecture demonstrates:
 - validate your deployment then approve the changes to be deployed using [AWS CloudFormation](https://aws.amazon.com/cloudformation/).
 
 > This orchestration of code movement from code checkin to deployment is securely handled by [AWS CodePipeline](https://aws.amazon.com/codepipeline/)
-
-## Introduction
-
-In this project we are going to be implementing cross account deployment strategy explained in [this](https://aws.amazon.com/blogs/devops/aws-building-a-secure-cross-account-continuous-delivery-pipeline/) blog to deployment of Lambda based API’s using third party [Serverless](https://www.serverless.com/) framework.
-
-![](images/CrossAccountServerlessDeployment.png)
 
 #### Pre-requisites 
 1. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
