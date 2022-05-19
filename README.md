@@ -18,8 +18,61 @@ In this project we are going to be implementing cross account deployment strateg
 4. Have the following AWS accounts (if using Control Tower, [this is useful](https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html#quick-account-provisioning)):
     * Tooling - Source 
     * Development - Target 
-5. Create permissions for tools account (optional)
+5. Create permissions for Development - Target account (optional)
 
+If you want to create IAM user and role only for this particular deployment please follow the instructions from [Set up additional tools account permissions](Permissions-accounts-set-up/Dev/README.md)
+If your profile user has enough permissions, this step can be skipped. 
+
+6. Create permissions for tools account (optional)
+
+If you want to create IAM user and role only for this particular deployment please follow the instructions from [Set up additional tools account permissions](Permissions-accounts-set-up/Tools/README.md)
+If your profile user has enough permissions, this step can be skipped. 
+
+#### 1. Deploy Development - Target account roles
+
+- deploy IAM role  
+
+```sh
+aws cloudformation deploy --stack-name cross-account-role --template-file cloudformation/target-account/cf-CrossAccountRole.yml --capabilities CAPABILITY_NAMED_IAM --parameter-overrides ToolsAccountID=${ToolsAccountID} --profile dev_deployer 
+```
+
+- deploy to be used by Cloudformation Service to create resources
+
+```sh
+aws cloudformation deploy --stack-name cross-account-execution-role --template-file cloudformation/target-account/cf-CloudFormationExecutionRole.yml --capabilities CAPABILITY_NAMED_IAM --parameter-overrides ToolsAccountID=${ToolsAccountID} --profile dev_deployer 
+```
+
+#### 2. Deploy Tooling - Source account roles
+
+- deploy pipeline stack
+
+```sh
+aws cloudformation deploy --stack-name codecommit-repository-and-cicd-pipeline  --template-file cloudformation/source-account/cf-ServerlessDeployPipeline.yml --capabilities CAPABILITY_NAMED_IAM --parameter-overrides TargetAccountID=${DevToolsID}  --profile tools_deployer 
+```
+
+- record codecommit URL repo 
+
+AWS Console - Cloud Formation - stack 'codecommit-repository-and-cicd-pipeline' - outputs - OutCodeCommitRepoUrl
+
+
+# Troubleshooting
+
+If we have a problem with not enough permissions and Cloudformation stack fail then we should:
+
+
+- remove stack
+
+```sh
+aws cloudformation delete-stack --stack-name codecommit-repository-and-cicd-pipeline --profile tools_deployer
+```
+- i.e update policy input file file like Permissions-accounts-set-up/Tools/tools-admin-user-policy.json or Permissions-accounts-set-up/Dev/tools-admin-user-policy.json
+
+- update policy 
+```sh
+aws iam create-policy-version  --policy-arn arn:aws:iam::374925447540:policy/aws-refarch-cross-account-pipeline-sts-and-cloudformation-policy  --policy-document file://Permissions-accounts-set-up/Tools/tools-admin-user-policy.json --profile aleph_tools  --set-as-default
+```
+
+- deploy stack again
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.

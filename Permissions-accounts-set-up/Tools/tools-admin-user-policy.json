@@ -5,6 +5,12 @@
             "Effect": "Allow",
             "Action": [
                 "iam:ListRoles",
+                "iam:GetRole",
+                "iam:CreateRole",
+                "iam:DeleteRolePolicy",
+                "iam:DeleteRole",
+                "codecommit:CreateRepository",
+                "codecommit:ListRepositories",
                 "sts:AssumeRole",
                 "cloudformation:*",
                 "s3:CreateBucket",
