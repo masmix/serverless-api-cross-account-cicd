@@ -10,7 +10,12 @@
 # Prereqisities
 
 - AWS CLI installed
-- URL for Organisation SSO Dashbard is known. It should be an output from step 4 from main ![](../../README.md)
+- URL for Organisation SSO Dashbard is known. It should be an output from step 4 from  ![main README](../../README.md)
+
+Example URL
+```console
+https://d-93677b80d9.awsapps.com/start#/
+```
 
 # Configuration steps
 - get programatic acess keys from Dev-source account 
