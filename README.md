@@ -1,8 +1,10 @@
 ## Introduction
 
-In this project we are going to be implementing cross account deployment strategy explained in [this](https://aws.amazon.com/blogs/devops/aws-building-a-secure-cross-account-continuous-delivery-pipeline/) blog to deployment of Lambda based API’s using third party [Serverless](https://www.serverless.com/) framework.
+In this project we are going to be implementing cross account deployment strategy explained in [this AWS blog](https://aws.amazon.com/blogs/devops/aws-building-a-secure-cross-account-continuous-delivery-pipeline/) to deploy of Lambda based API’s using third party [Serverless](https://www.serverless.com/) framework.
 
 ![](images/CrossAccountServerlessDeployment.png)
+
+> It uses cross account deployment approach, which is AWS best practice for workloads.
 
 # Build CI/CD Pipeline for Cross Account Deployment of Lambda API Using Serverless Framework
 
