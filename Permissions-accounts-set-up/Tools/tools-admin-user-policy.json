@@ -14,6 +14,7 @@
                 "codecommit:ListRepositories",
                 "codecommit:DeleteRepository",
                 "codecommit:GetRepository",
+                "codebuild:CreateProject",
                 "sts:AssumeRole",
                 "cloudformation:*",
                 "s3:CreateBucket",
