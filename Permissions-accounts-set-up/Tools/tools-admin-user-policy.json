@@ -52,7 +52,8 @@
                 "s3:PutBucketPolicy",
                 "s3:DeleteBucketPolicy",
                 "events:DescribeRule",
-                "kms:*"
+                "kms:*",
+                "events:*"
             ],
             "Resource": "*"
         }
