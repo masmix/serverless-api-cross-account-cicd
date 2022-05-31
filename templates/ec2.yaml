@@ -1,0 +1,10 @@
+Resources:
+	MyNewEC2Instance:
+Type: AWS::EC2::Instance
+Properties: 
+  ImageId: <ami-id>
+  InstanceType: <ec2-instance-type>
+  SubnetId: <subnet-id>
+  SecurityGroupIds: 
+    - <security-group-id>
+  KeyName: <ec2-key-name>
